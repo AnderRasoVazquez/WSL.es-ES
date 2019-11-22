@@ -48,14 +48,14 @@ Invoke-WebRequest -Uri https://aka.ms/wsl-ubuntu-1604 -OutFile Ubuntu.appx -UseB
 > [!TIP]
 > Si la descarga tarda mucho tiempo, desactive la barra de progreso estableciendo `$ProgressPreference = 'SilentlyContinue'`
 
-### <a name="download-using-curl"></a>Descargar mediante rizo
-La actualización de Spring 2018 de Windows 10 (o posterior) incluye la popular [utilidad de línea de comandos de rizo](https://curl.haxx.se/) con la que puede invocar solicitudes web (es decir, HTTP GET, post, Put, etc.) desde la línea de comandos. Puede usar `curl.exe` para descargar el distribuciones anterior:
+### <a name="download-using-curl"></a>Descargar mediante curl
+La actualización de Spring 2018 de Windows 10 (o posterior) incluye la popular [utilidad de línea de comandos de curl](https://curl.haxx.se/) con la que puede invocar solicitudes web (es decir, HTTP GET, post, Put, etc.) desde la línea de comandos. Puede usar `curl.exe` para descargar el distribuciones anterior:
 
 ```console
 curl.exe -L -o ubuntu-1604.appx https://aka.ms/wsl-ubuntu-1604
 ```
 
-En el ejemplo anterior, se ejecuta `curl.exe` (no solo `curl`) para asegurarse de que, en PowerShell, se invoca el ejecutable de rizo real, no el alias de rizo de PowerShell para [Invoke-WebRequest](https://docs.microsoft.com/en-us/powershell/module/microsoft.powershell.utility/invoke-webrequest?view=powershell-6) .
+En el ejemplo anterior, se ejecuta `curl.exe` (no solo `curl`) para asegurarse de que, en PowerShell, se invoca el ejecutable de curl real, no el alias de curl de PowerShell para [Invoke-WebRequest](https://docs.microsoft.com/en-us/powershell/module/microsoft.powershell.utility/invoke-webrequest?view=powershell-6) .
 
 > Nota: el uso de `curl` podría ser preferible si tiene que invocar o crear scripts de pasos de descarga con el shell de CMD o `.bat`  /  scripts `.cmd`.
 
